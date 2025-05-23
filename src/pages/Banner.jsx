@@ -27,8 +27,7 @@ const Banner = () => {
         <Fade cascade>
                 <span className='text-5xl text-blue-600 font-bold'>
                 <Typewriter 
-                // words={['Roommate Match', 'Shared Living', 'Home Together']}
-                
+ 
                 words={['Find Your Perfect Roommate Match']}
                 loop={0}
                 cursor
