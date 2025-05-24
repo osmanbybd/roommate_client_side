@@ -17,8 +17,6 @@ useEffect(()=>{
   })
 },[])
 
-
-
     return (
         <div>
            <div>
@@ -35,7 +33,6 @@ useEffect(()=>{
                 }
             </div>
 
-            
            </div>
            <div className={`${darkMode ? "bg-gray-500" : "bg-gray-100"}`}>
             <Reurement></Reurement>
