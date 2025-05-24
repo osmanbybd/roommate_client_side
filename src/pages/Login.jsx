@@ -23,7 +23,7 @@ const handleSignIn = e =>{
 
     userLogin(email, password)
     .then(result => {
-        console.log(result.user)
+        // console.log(result.user)
         navigate(location.state || '/')
         Swal.fire({
         position: "top-end",
@@ -33,7 +33,9 @@ const handleSignIn = e =>{
         timer: 1500
 });
     })
-    .catch(error => console.log(error))
+    .catch(error =>{
+      //  console.log(error)
+    })
 
 
 
