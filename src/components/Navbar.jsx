@@ -5,6 +5,8 @@ import { AuthContext } from '../context/AuthContext';
 import logo from '../assets/user.png'
 import { ThemeContext } from '../context/ThemeProvider';
 
+
+
 const Navbar = () => {
 
   const {user,logOut} = useContext(AuthContext)
@@ -30,7 +32,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar   container mx-auto">
+        <div className={`navbar   container mx-auto ${darkMode ? 'bg-gray-900' : 'bg-gray-200'}`}>
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -52,7 +54,14 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end hidden lg:flex gap-3">
-      
+      <div><button 
+      className='btn btn-primary' 
+      onClick={() =>handleThemeChange(darkMode ? 'light' : 'dark')}
+      >
+        {
+          darkMode ? 'light mode' : 'dark mode' 
+        }
+        </button></div>
   
       {
         user ? (
