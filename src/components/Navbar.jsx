@@ -3,11 +3,12 @@ import { FaHome } from 'react-icons/fa';
 import { Link, NavLink, } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
 import logo from '../assets/user.png'
+import { ThemeContext } from '../context/ThemeProvider';
 
 const Navbar = () => {
 
   const {user,logOut} = useContext(AuthContext)
-
+  const {darkMode, handleThemeChange} = useContext(ThemeContext)
 
   const handleLogOut = () =>{
     logOut()
@@ -51,7 +52,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end hidden lg:flex gap-3">
-
+      
   
       {
         user ? (
