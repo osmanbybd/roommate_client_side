@@ -56,11 +56,11 @@ const Navbar = () => {
   </div>
   <div className="navbar-end hidden lg:flex gap-3">
       <div><button 
-      className='btn btn-primary' 
-      onClick={() =>handleThemeChange(darkMode ? <MdLightMode /> : <MdDarkMode />)}
+      className='cursor-pointer' 
+      onClick={() =>handleThemeChange(darkMode ? 'light' : 'dark')}
       >
         {
-          darkMode ? 'light mode' : 'dark mode' 
+          darkMode ?<MdLightMode size={25} /> : <MdDarkMode size={25} /> 
         }
         </button></div>
   
