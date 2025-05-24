@@ -11,7 +11,7 @@ const Profile = () => {
    const allData = useLoaderData()
 
    const [data, setData] = useState(allData)
-	console.log(data)
+	// console.log(data)
 	const [showUpdate, setShowUpdate] = useState(false)
 
 	const handleUpdaeProfile = e =>{
@@ -35,7 +35,7 @@ const Profile = () => {
 		})
 		.then(res => res.json())
 		.then(data =>{
-			console.log(data)
+			// console.log(data)
 			setData(updateProfile)
 			if(data.modifiedCount){
 				Swal.fire({

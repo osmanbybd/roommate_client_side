@@ -9,7 +9,7 @@ const BrowsListing = () => {
     const initialAllData = useLoaderData()
     const [allData , setAllData] = useState(initialAllData)
     // const {darkMode} = useContext(ThemeContext)
-    console.log(allData)
+    // console.log(allData)
     const [serchTerm , setSearchTerm] = useState(' ')
 
     const handleSearch = e =>{

@@ -19,7 +19,7 @@ import Swal from 'sweetalert2';
 const Update = () => {
 
     const updateData = useLoaderData()
-    console.log(updateData)
+    // console.log(updateData)
     const navigate = useNavigate()
     const {_id , title, roomType, rent, location, contact, lifestyle, description, name, email,availability} =updateData
     
@@ -33,7 +33,7 @@ const Update = () => {
             ...UpdateField,
             lifestyle
     }
-    console.log(UpdateListing)
+    // console.log(UpdateListing)
 
 
 
@@ -58,7 +58,7 @@ const Update = () => {
     })
     .then(res => res.json())
     .then(data =>{
-        console.log(data)
+        // console.log(data)
         if(data.modifiedCount > 0 ){
             Swal.fire({
             position: "top-end",

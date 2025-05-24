@@ -44,7 +44,7 @@ const handleGoogle = () =>{
 
     googleLogin(provider)
     .then(result =>{
-        console.log(result.user)
+        // console.log(result.user)
         setUser(result.user.photoURL)
         navigate(location.state || '/')
         Swal.fire({

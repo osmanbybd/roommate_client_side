@@ -46,7 +46,7 @@ const {darkMode} = useContext(ThemeContext)
         lifestyle
     }
 
-    console.log(newFormData)
+    // console.log(newFormData)
 
 
     fetch('https://roommate-server-side-alpha.vercel.app/addListing', {

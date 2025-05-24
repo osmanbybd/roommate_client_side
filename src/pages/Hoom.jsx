@@ -9,7 +9,7 @@ import FaqSection from './FaqSwction';
 import { ThemeContext } from '../context/ThemeProvider';
 const Hoom = () => {
 const addFetured = useLoaderData()
-console.log(addFetured)
+// console.log(addFetured)
 const {darkMode} =useContext(ThemeContext)
 useEffect(()=>{
   Aos.init({

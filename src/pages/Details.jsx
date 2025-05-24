@@ -7,7 +7,7 @@ import { ThemeContext } from '../context/ThemeProvider';
 const Details = () => {
 
     const data= useLoaderData()
-    console.log(data)
+    // console.log(data)
     const [likeCounte, setLikeCounte] = useState(data.likes || 0)
     const [shoePhone, setShoePhone] = useState(false)
     const {darkMode} =useContext(ThemeContext)

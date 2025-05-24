@@ -11,7 +11,7 @@ const MyListing = () => {
 
 
 
-    console.log(myListing)
+    // console.log(myListing)
 
 
 
@@ -34,7 +34,7 @@ const handleDelete = (id) =>{
            })     
            .then(res => res.json())
            .then(data =>{
-            console.log(data)
+            // console.log(data)
             if(data.deletedCount){
             Swal.fire({
             title: "Deleted!",

@@ -39,7 +39,7 @@ const handleSignUp = e =>{
 
     userRegister(email, password)
     .then(result => {
-        console.log(result.user)
+        // console.log(result.user)
         const userProfile ={
             email,
             ...restProfile,
@@ -80,7 +80,7 @@ const handleGoogle = () =>{
     googleLogin(provider)
     .then(result =>{
         const logedUser = result.user
-        console.log(logedUser)  
+        // console.log(logedUser)  
         navigate('/')
         setUser(logedUser)
         const userProfile = {
