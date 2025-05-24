@@ -30,8 +30,6 @@ const Navbar = () => {
     { user &&  <li><NavLink  className={`text-xl font-semibold ${darkMode ? 'text-white' : 'text-black'}`} to={`myListing?email=${user?.email}`} >My Listing</NavLink></li>}
   </>
 
-
-
     return (
         <div className={`navbar ${darkMode ? 'bg-gray-700' : 'bg-gray-200'}  px-5`}>
   <div className="navbar-start">
