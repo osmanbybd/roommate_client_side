@@ -12,11 +12,7 @@ const Invalid = () => {
             GO HOME
             </button>
          </Link>
-         <Link to='/'>
-         <button className="inline-flex items-center cursor-pointer justify-center w-full px-8 py-4 text-base font-bold leading-6 text-white bg-pink-600border border-transparent rounded-full md:w-auto hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">
-           Log In
-            </button>
-         </Link>
+         
       </div>
  </div> 
     );
