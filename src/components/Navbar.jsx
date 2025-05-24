@@ -42,7 +42,12 @@ const Navbar = () => {
         className="menu menu-sm dropdown-content rounded-box z-1 mt-3 w-52 p-2 shadow ">
         
        {links}
-       <Link><button className='btn btn-error' onClick={handleLogOut}>Log out</button></Link>
+      
+       {
+        user ? <Link><button className='btn btn-error' onClick={handleLogOut}>Log out</button></Link> :  <Link to='login'> <button className="btn btn-primary">Log in</button></Link>
+         
+        
+       }
       </ul>
     </div>
     <Link className=" lg:text-4xl md:text-2xl text-xl flex items-center gap-2 "><FaHome className='text-blue-700' /> RoomMate</Link>
