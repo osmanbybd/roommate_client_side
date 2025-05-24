@@ -48,7 +48,7 @@ const navigate = useNavigate()
     console.log(newFormData)
 
 
-    fetch('http://localhost:5000/addListing', {
+    fetch('https://roommate-server-side-alpha.vercel.app/addListing', {
         method: 'POST',
         headers: {
             'content-type' : 'application/json'

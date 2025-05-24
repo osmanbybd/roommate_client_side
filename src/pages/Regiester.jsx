@@ -57,7 +57,7 @@ const handleSignUp = e =>{
 
 
 
-        fetch('http://localhost:5000/users', {
+        fetch('https://roommate-server-side-alpha.vercel.app/users', {
             method: 'POST',
             headers:{
                 'content-type' : 'application/json'
@@ -91,7 +91,7 @@ const handleGoogle = () =>{
 
         }
 
-        fetch('http://localhost:5000/users', {
+        fetch('https://roommate-server-side-alpha.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

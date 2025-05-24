@@ -49,7 +49,7 @@ const Update = () => {
     }
 
 
-    fetch(`http://localhost:5000/addListing/${_id}`, {
+    fetch(`https://roommate-server-side-alpha.vercel.app/addListing/${_id}`, {
         method: 'PUT',
         headers:{
             'content-type' : 'application/json'

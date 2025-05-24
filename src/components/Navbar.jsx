@@ -23,10 +23,10 @@ const Navbar = () => {
 
   const links = <>
   
-  <li><NavLink className='text-xl font-semibold' to='/'>Home</NavLink></li>
-  <li><NavLink className='text-xl font-semibold' to='addListing'>Add Listing</NavLink></li>
-  <li><NavLink className='text-xl font-semibold' to='browsListing'>Brows Listing</NavLink></li>
-    { user &&  <li><NavLink  className='text-xl font-semibold' to={`myListing?email=${user?.email}`} >My Listing</NavLink></li>}
+  <li><NavLink className={`text-xl font-semibold ${darkMode ? 'text-white' : 'text-black'}`} to='/'>Home</NavLink></li>
+  <li><NavLink className={`text-xl font-semibold ${darkMode ? 'text-white' : 'text-black'}`} to='addListing'>Add Listing</NavLink></li>
+  <li><NavLink className={`text-xl font-semibold ${darkMode ? 'text-white' : 'text-black'}`}to='browsListing'>Brows Listing</NavLink></li>
+    { user &&  <li><NavLink  className={`text-xl font-semibold ${darkMode ? 'text-white' : 'text-black'}`} to={`myListing?email=${user?.email}`} >My Listing</NavLink></li>}
   </>
 
 
@@ -40,7 +40,7 @@ const Navbar = () => {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        className="menu menu-sm dropdown-content rounded-box z-1 mt-3 w-52 p-2 shadow ">
         
        {links}
        <a className="btn">Button</a>

@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { ThemeContext } from '@emotion/react';
 
 const Root = () => {
-   
+    
     const isNotFoundPage = location.pathname === "/Invalid"
     const {darkMode} = useContext(ThemeContext)
     return <>

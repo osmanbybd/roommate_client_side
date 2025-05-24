@@ -15,7 +15,7 @@ const Details = () => {
 
 
     const handleCounte = async()=>{
-        const res =await fetch(`http://localhost:5000/addListing/like/${data._id}`, {
+        const res =await fetch(`https://roommate-server-side-alpha.vercel.app/addListing/like/${data._id}`, {
             method: 'PUT'
         })
         if(res.ok){
