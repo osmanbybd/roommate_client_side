@@ -4,6 +4,7 @@ import { Link, NavLink, } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
 import logo from '../assets/user.png'
 import { ThemeContext } from '../context/ThemeProvider';
+import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
 
 
@@ -56,7 +57,7 @@ const Navbar = () => {
   <div className="navbar-end hidden lg:flex gap-3">
       <div><button 
       className='btn btn-primary' 
-      onClick={() =>handleThemeChange(darkMode ? 'light' : 'dark')}
+      onClick={() =>handleThemeChange(darkMode ? <MdLightMode /> : <MdDarkMode />)}
       >
         {
           darkMode ? 'light mode' : 'dark mode' 

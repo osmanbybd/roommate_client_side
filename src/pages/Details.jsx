@@ -30,7 +30,7 @@ const Details = () => {
 
 
     return (
-        <div className={`flex justify-center items-center p-5 mt-1 ${darkMode ? 'bg-gray-900' : 'bg-gray-200'}`}>
+        <div className={`flex justify-center items-center p-5  ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
           <div className=' bg-gray-200 rounded-lg  p-5 '>
             <h1 className='text-center py-3 text-xl text-gray-400'> {likeCounte && <p>{data.likes} people are interested in this listing</p>}</h1>
             <div className='flex flex-col lg:justify-between '>
