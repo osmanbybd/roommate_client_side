@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaHeart, FaPhoneAlt } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import { Link, useLoaderData } from 'react-router';
+import { ThemeContext } from '../context/ThemeProvider';
 
 const Details = () => {
 
@@ -9,7 +10,7 @@ const Details = () => {
     console.log(data)
     const [likeCounte, setLikeCounte] = useState(data.likes || 0)
     const [shoePhone, setShoePhone] = useState(false)
-
+    const {darkMode} =useContext(ThemeContext)
 
     const lifestyleData = data.lifestyle ? (Array.isArray(data.lifestyle) ? data.lifestyle : data.lifestyle.split(',')) : []
 
@@ -29,7 +30,7 @@ const Details = () => {
 
 
     return (
-        <div className='container mx-auto flex justify-center items-center p-5 mt-1'>
+        <div className={`flex justify-center items-center p-5 mt-1 ${darkMode ? 'bg-gray-900' : 'bg-gray-200'}`}>
           <div className=' bg-gray-200 rounded-lg  p-5 '>
             <h1 className='text-center py-3 text-xl text-gray-400'> {likeCounte && <p>{data.likes} people are interested in this listing</p>}</h1>
             <div className='flex flex-col lg:justify-between '>

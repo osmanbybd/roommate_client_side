@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
+import { ThemeContext } from '../context/ThemeProvider';
 
 
  const lifestyleOption =[
@@ -18,7 +19,7 @@ const AddListing = () => {
 
 
 const navigate = useNavigate()
-
+const {darkMode} = useContext(ThemeContext)
    const handleAddListing = e =>{
     e.preventDefault()
 
@@ -79,7 +80,7 @@ const navigate = useNavigate()
 
     return (
 
-         <div className='lg:p-24 p-8'>
+         <div className={`lg:p-24 p-8 ${darkMode ? "bg-gray-700" : "bg-white"}`}>
             <div className='p-12 text-center space-y-4'>
                 <h1 className='lg:text-7xl text-xs font-semibold'>Add Roommate Listing</h1>
                 <p>Create a new listing to find your perfect roommate match</p>
@@ -87,15 +88,15 @@ const navigate = useNavigate()
             <form onSubmit={handleAddListing} className=' border border-gray-200 shadow-lg p-5 rounded-lg'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-4 '>
                     <fieldset className="fieldset    p-4">
-                    <label className="label">Title</label>
+                    <label className={`label ${darkMode ? "text-white" : "text-black"}`}>Title</label>
                     <input type="text" name='title' required className="input w-full shadow-lg border border-e-gray-200" placeholder="Title" />
                     </fieldset>
                     <fieldset className="fieldset    p-4">
-                    <label className="label">location</label>
+                    <label className={`label ${darkMode ? "text-white" : "text-black"}`}>location</label>
                     <input type="text" name='location' required className="input w-full shadow-lg border border-e-gray-200" placeholder="location" />
                     </fieldset>
                     <fieldset className="fieldset    p-4">
-                    <label className="label">Rent Room</label>
+                    <label className={`label ${darkMode ? "text-white" : "text-black"}`}>Rent Room</label>
                     <input type="number" name='rent' required className="input w-full shadow-lg border border-e-gray-200" placeholder="125" />
                     </fieldset>
                     <fieldset className="fieldset     p-4">
@@ -108,12 +109,12 @@ const navigate = useNavigate()
                     </select>
                     </fieldset>
                     <fieldset className="fieldset     p-4">
-                    <label className="label">Contact </label>
+                    <label className={`label ${darkMode ? "text-white" : "text-black"}`}>Contact </label>
                     <input type="text" name='contact' required className="input w-full shadow-lg border border-e-gray-200" placeholder="Phone Number" />
                     </fieldset>
                     
                   <fieldset className="fieldset    p-4">
-                    <label className="label">Availibity</label>
+                    <label className={`label ${darkMode ? "text-white" : "text-black"}`}>Availibity</label>
                     <select name='availability'  defaultValue="Pick a color" className="select w-full">
                     <option disabled={true}>Availabity</option>
                     <option value='Available'>Available</option>
@@ -123,19 +124,19 @@ const navigate = useNavigate()
                     
                     </fieldset>
                 <fieldset className="fieldset  w-full my-3  p-4">
-                    <label className="label">Email</label>
+                    <label className={`label ${darkMode ? "text-white" : "text-black"}`}>Email</label>
                     <input type="text"  name='email' required className="input w-full shadow-lg border border-e-gray-200" placeholder="Email" />
                     </fieldset>
                 <fieldset className="fieldset w-full my-3  p-4">
-                    <label className="label">Name</label>
+                    <label className={`label ${darkMode ? "text-white" : "text-black"}`}>Name</label>
                     <input type="text"  name='name' required className="input w-full shadow-lg border border-e-gray-200" placeholder="Name" />
                     </fieldset>
                    
                 </div>
        
                       <fieldset className="fieldset   p-4">
-                    <label className="label">Life Style</label>
-                      <div className='grid grid-cols-1 lg:grid-cols-2 gap-3 text-xl'>
+                    <label className={`label ${darkMode ? "text-white" : "text-black"}`}>Life Style</label>
+                      <div className={`grid grid-cols-1 lg:grid-cols-2 gap-3 text-xl ${darkMode ? "text-white" : "text-black"}`}>
                         {
                             lifestyleOption.map(option =>(
                                             <label key={option} className="label">
@@ -149,7 +150,7 @@ const navigate = useNavigate()
                     </fieldset>
                 
                    <fieldset className="fieldset w-full my-3  p-4">
-                           <label className="label">Description</label>
+                           <label className={`label ${darkMode ? "text-white" : "text-black"}`}>Description</label>
                     <textarea name='description' required className="textarea w-full shadow-lg border border-e-gray-200" placeholder="Bio"></textarea>
                     </fieldset>
                 

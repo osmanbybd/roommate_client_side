@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+// import { useContext } from 'react';
 import { FaRegEye } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import { Link, useLoaderData } from 'react-router';
+import { ThemeContext } from '../context/ThemeProvider';
 
 const BrowsListing = () => {
     const initialAllData = useLoaderData()
     const [allData , setAllData] = useState(initialAllData)
+    // const {darkMode} = useContext(ThemeContext)
     console.log(allData)
     const [serchTerm , setSearchTerm] = useState(' ')
 
@@ -26,7 +29,7 @@ const BrowsListing = () => {
 
 
     return (
-      <div className='container mx-auto p-3'>
+      <div className={` p-3  w-full container mx-auto ` }>
         <div className='text-center'>
         <h1 className='lg:text-5xl md:text-2xl text-xl font-bold'>Browse Roommate Listings</h1>
             <p>Find your perfect roommate match from our listings</p>

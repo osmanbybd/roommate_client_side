@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 import { NavLink } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
 import { FaGithub, FaHome } from 'react-icons/fa';
+import { ThemeContext } from '../context/ThemeProvider';
 
 const Footer = () => {
 	const {user} = useContext(AuthContext)
-
+	const {darkMode} = useContext(ThemeContext)
   const links = <>
   
   <li><NavLink className='text-xs font-semibold' to='/'>Home</NavLink></li>
@@ -15,7 +16,7 @@ const Footer = () => {
   </>
 
     return (
-      <footer className="px-4 divide-y ">
+      <footer className={`px-4 divide-y  ${darkMode ? "bg-gray-600" : "bg-white"}`}>
 	<div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
 		<div className="lg:w-1/3">
 			<h1 className='flex items-center gap-2 font-bold text-3xl'><FaHome className='text-blue-700' /> RoomMate</h1>

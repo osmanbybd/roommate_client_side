@@ -32,7 +32,7 @@ const Navbar = () => {
 
 
     return (
-        <div className={`navbar   container mx-auto ${darkMode ? 'bg-gray-900' : 'bg-gray-200'}`}>
+        <div className={`navbar ${darkMode ? 'bg-gray-700' : 'bg-gray-200'}  px-5`}>
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
