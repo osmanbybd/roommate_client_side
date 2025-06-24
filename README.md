@@ -1,34 +1,44 @@
-website Name : Roommate
-https://roommate-client.web.app/
 
 
 
-✅ 1. Browse Listings
-Users can view available room/flat listings posted by others.
 
-Each listing includes location, rent, amenities, images, and contact info.
+# 🏠 Roommate Finder - Client
+# website Name : Roommate
+  https://roommate-client.web.app/
 
+# 🏠 Roommate Finder - Client
 
-✅ 2. Add Listing
-Registered users can add their own room/house listings.
+This is the **Frontend** of the Roommate Finder Web App, built with **React**, **TailwindCSS**, and **Firebase Authentication**. Users can create, update, like, and view roommate posts in an interactive and responsive UI.
 
-Full CRUD support (Create, Read, Update, Delete).
+---
 
-Data is saved to MongoDB through a form.
+## 🚀 Features
 
-✅ 3. Like & Contact Owner Feature
-Users can like listings they are interested in.
+- 🔐 Firebase Authentication (Login/Register)
+- 🧑 Add Roommate Listings
+- 📋 Browse & View Listings
+- ❤️ Like a listing to show interest
+- ☎️ View Contact Info only after liking
+- ✏️ Update & 🗑️ Delete own listings
+- 🔒 Protected Routes with Private Route Setup
+- 🌐 Responsive Design with Tailwind & DaisyUI
+- 🔍 Filter by My Listings
+- 🍞 Toast/SweetAlert for feedback
 
-Once liked, the owner's contact number (phone/email) becomes visible.
+---
 
-✅ 4. Dark / Light Mode Toggle
-The website supports both dark and light themes.
+## ⚙️ Technologies Used
 
-Theme preference is saved using LocalStorage or user profile settings.
+- **React** (Vite)
+- **Tailwind CSS**
+- **DaisyUI**
+- **React Router**
+- **Firebase Authentication**
+- **Axios** for API requests
+- **SweetAlert2** for success messages
 
-✅ 5. User Authentication & My Listings
-Firebase authentication allows users to register, log in, and log out.
+---
 
-Logged-in users can manage their own listings from the My Listings page (edit/delete).
+##  server_side_repo
 
-
+    https://github.com/osmanbybd/roomamte_server_side
